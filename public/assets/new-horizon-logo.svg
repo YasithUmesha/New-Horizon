@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-labelledby="title description">
+  <title id="title">New Horizon</title>
+  <desc id="description">New Horizon Education Consultants logo</desc>
+  <rect width="360" height="96" rx="18" fill="#0A2540"/>
+  <path d="M25 67c15-23 31-34 48-34 17 0 31 9 44 26-13-7-25-10-37-8-17 2-29 9-37 16H25Z" fill="#8DE3EA"/>
+  <path d="M29 70c20-5 40-5 60 0" fill="none" stroke="#F06A5B" stroke-linecap="round" stroke-width="5"/>
+  <text x="135" y="46" fill="#fff" font-family="Arial, sans-serif" font-size="27" font-weight="700">New Horizon</text>
+  <text x="137" y="68" fill="#B7D4E1" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">EDUCATION CONSULTANTS</text>
+</svg>

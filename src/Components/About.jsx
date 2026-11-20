@@ -1,101 +1,45 @@
-import React from "react";
-import "../index.css";
-import Header from "./Header";
-import Footer from "./Footer";
+import { Link } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
 
-const About = () => {
-  return (
-    <div>
-      <Header />
-
-      <div className="about-us w-full bg-white text-gray-900 mt-32">
-        {/* Section for Image and Title */}
-        <div className="flex">
-          <section className="relative">
-            <img
-              className="max-w-72 h-full object-cover"
-              src="/assets/Graduation.jpg"
-              alt="Graduation"
-            />
-            <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-start p-10">
-              <h1 className="text-white text-6xl font-bold leading-tight">
-                Who
-              </h1>
-              <h1 className="text-white text-6xl font-bold leading-tight">
-                We
-              </h1>
-              <h1 className="text-white text-6xl font-bold leading-tight">
-                Are?
-              </h1>
-            </div>
-          </section>
-
-          {/* Vision and Mission Section */}
-          <section className="gap-10 px-10 py-3 mb-20 my-4">
-            {/* Vision Box */}
-
-            <div className="flex mb-20">
-              <div className="bg-navy max-h-16 py-4 rounded-lg shadow-lg">
-                <h2 className="text-2xl text-white font-bold mx-10">Vision</h2>
-              </div>
-
-              <div className="bg-blue-200 p-4 rounded-lg shadow-lg -translate-x-12 translate-y-12 max-w-3xl">
-                <p className="text-gray-700">
-                  To become the leading education migration consultancy,
-                  empowering students worldwide to achieve their academic and
-                  career aspirations through seamless international education
-                  opportunities.
-                </p>
-              </div>
-            </div>
-
-            {/* Mission Box */}
-            <div className="flex xl:translate-x-52 translate-x-12">
-              <div className="bg-navy p-2 max-h-16 rounded-lg shadow-lg ">
-                <h2 className="text-2xl text-white font-bold my-1 mx-6">
-                  Mission
-                </h2>
-              </div>
-
-              <div className="bg-blue-200 rounded-lg p-2 shadow-lg -translate-x-12 translate-y-12 max-w-3xl">
-                <p className="text-gray-700">
-                  We provide students with expert guidance and personalized
-                  solutions for studying abroad. Our goal is to simplify the
-                  migration process through comprehensive support in university
-                  selection, visa applications, and international transitions,
-                  ensuring each student’s success.
-                </p>
-              </div>
-            </div>
-
-            {/* Description Box */}
-            <div className="bg-teal-300  p-6 rounded-3xl mt-20 ml-24 text-center max-w-4xl">
-              <p className="text-xl text-gray-800">
-                ABC Education Migration Consultants is a dedicated team of
-                professionals specializing in education migration services. We
-                are passionate about helping students pursue their academic
-                dreams abroad, providing expert advice and tailored support
-                throughout the entire process. Our team consists of experienced
-                education consultants who understand the complexities of
-                international study applications, visa procedures, and
-                university admissions.
-              </p>
-            </div>
-
-            {/* Next Button */}
-            <div className="flex justify-center m-6">
-              <div className="bg-navy hover:bg-blue-950-700 text-white font-bold py-4 px-16 rounded-md shadow-lg transition-colors duration-300">
-                <button>Next {" >>>"}</button>
-              </div>
-            </div>
-            <hr className="bg-red-800 h-1"/>
-
-          </section>
+const About = () => (
+  <>
+    <Header />
+    <main>
+      <section className="page-hero">
+        <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+          <p className="eyebrow text-cyan-200">About New Horizon</p>
+          <h1 className="max-w-3xl font-display text-5xl font-bold leading-tight text-white sm:text-6xl">Guidance with a human touch.</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">We believe studying abroad should feel exciting, not overwhelming. Our job is to make the path clear and keep you moving forward.</p>
         </div>
-      </div>
-      <Footer />
-    </div>
-  );
-};
+      </section>
+      <section className="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-2 lg:px-8">
+        <div className="overflow-hidden rounded-[2rem]"><img src="/assets/Graduation.jpg" alt="Graduates celebrating together" className="h-full min-h-[420px] w-full object-cover" /></div>
+        <div className="flex flex-col justify-center">
+          <p className="eyebrow">Why we exist</p>
+          <h2 className="section-title">Big dreams deserve a thoughtful plan.</h2>
+          <p className="mt-5 leading-8 text-slate-600">New Horizon was created for students and families who want honest advice, practical support, and a team that truly knows their story. We pair local understanding with international education expertise.</p>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2">
+            <div className="rounded-2xl bg-cyan-50 p-5"><p className="font-bold text-navy">Our vision</p><p className="mt-2 text-sm leading-6 text-slate-600">A world where every student can access the right global opportunity.</p></div>
+            <div className="rounded-2xl bg-orange-50 p-5"><p className="font-bold text-navy">Our promise</p><p className="mt-2 text-sm leading-6 text-slate-600">Clear advice, careful preparation, and support beyond the paperwork.</p></div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-slate-100 px-5 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl text-center"><p className="eyebrow">Our values</p><h2 className="section-title">The way we work matters.</h2>
+          <div className="mt-12 grid gap-5 text-left md:grid-cols-3">
+            {[
+              ['Listen deeply', 'Your goals, strengths, and circumstances come first in every recommendation.'],
+              ['Be transparent', 'We explain the process, options, and next steps in plain language.'],
+              ['Stay beside you', 'Our relationship does not end when your application is submitted.'],
+            ].map(([title, text]) => <div key={title} className="rounded-3xl bg-white p-7 shadow-sm"><h3 className="font-display text-xl font-bold text-navy">{title}</h3><p className="mt-3 leading-7 text-slate-600">{text}</p></div>)}
+          </div>
+        </div>
+      </section>
+      <section className="px-5 py-20 text-center lg:px-8"><h2 className="section-title">Let&apos;s plan your next move.</h2><p className="mx-auto mt-4 max-w-xl leading-7 text-slate-600">A friendly conversation is all it takes to get started.</p><Link to="/contact_us" className="mt-8 inline-block rounded-full bg-coral px-7 py-4 font-bold text-white hover:bg-orange-500">Book a consultation →</Link></section>
+    </main>
+    <Footer />
+  </>
+);
 
 export default About;

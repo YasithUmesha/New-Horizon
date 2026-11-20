@@ -1,3 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #17243b;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-coral;
+  }
+
+  .section-title {
+    @apply mt-3 font-display text-4xl font-bold leading-tight text-navy sm:text-5xl;
+  }
+
+  .page-hero {
+    @apply relative overflow-hidden bg-navy;
+    background-image: radial-gradient(circle at 85% 20%, rgba(80, 205, 220, 0.18), transparent 28%), radial-gradient(circle at 15% 100%, rgba(255, 111, 97, 0.12), transparent 30%);
+  }
+
+  .form-input {
+    @apply mt-2 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 font-normal text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100;
+  }
+}
+
+.hero-pattern {
+  background-color: #0a2540;
+  background-image: radial-gradient(circle at 80% 10%, rgba(86, 211, 224, 0.18), transparent 25%), linear-gradient(120deg, #0a2540 0%, #142f50 100%);
+}
