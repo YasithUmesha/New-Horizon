@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 function Footer() {
   return (
@@ -23,9 +24,9 @@ function Footer() {
         <div>
           <h2 className="font-bold text-white">Get in touch</h2>
           <div className="mt-4 space-y-3 text-sm text-slate-300">
-            <p>hello@newhorizon.edu</p>
-            <p>+94 77 123 4567</p>
-            <p>Colombo, Sri Lanka</p>
+          <p className="flex items-center gap-2"><Mail size={15} className="text-cyan-200" />hello@newhorizon.edu</p>
+          <p className="flex items-center gap-2"><Phone size={15} className="text-cyan-200" />+94 77 123 4567</p>
+          <p className="flex items-center gap-2"><MapPin size={15} className="text-cyan-200" />Colombo, Sri Lanka</p>
           </div>
         </div>
       </div>

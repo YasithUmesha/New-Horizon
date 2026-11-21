@@ -10,6 +10,7 @@
   background: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -42,9 +43,43 @@ body {
   .form-input {
     @apply mt-2 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 font-normal text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100;
   }
+
+  .glass-panel {
+    @apply border border-white/70 bg-white/55 backdrop-blur-xl;
+    box-shadow: 0 24px 70px rgba(10, 37, 64, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .glass-nav {
+    @apply border-b border-white/70 bg-white/70 backdrop-blur-xl;
+    box-shadow: 0 10px 40px rgba(10, 37, 64, 0.06);
+  }
 }
 
 .hero-pattern {
-  background-color: #0a2540;
-  background-image: radial-gradient(circle at 80% 10%, rgba(86, 211, 224, 0.18), transparent 25%), linear-gradient(120deg, #0a2540 0%, #142f50 100%);
+  background-color: #f4f7f5;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(235, 243, 241, 0.88));
+}
+
+.ambient-orb {
+  position: absolute;
+  z-index: 0;
+  border-radius: 9999px;
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.ambient-orb-cyan {
+  top: 12%;
+  right: 12%;
+  width: 15rem;
+  height: 15rem;
+  background: rgba(141, 227, 234, 0.35);
+}
+
+.ambient-orb-coral {
+  bottom: -5rem;
+  left: 34%;
+  width: 12rem;
+  height: 12rem;
+  background: rgba(240, 106, 91, 0.16);
 }

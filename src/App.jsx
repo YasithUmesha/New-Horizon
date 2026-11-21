@@ -5,10 +5,12 @@ import Services from "./Components/Services";
 import Contact from "./Components/Contact";
 import { CollegeVisa, SchoolingVisa } from "./Pages/ServiceDetail";
 import EnglishTests from "./Pages/EnglishTests";
+import ScrollToTop from "./Components/ScrollToTop";
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={< About/>} />
